@@ -20,12 +20,14 @@ void WebSocketHandler::connectToServer(QString hostAddress)
 {
     qDebug() << "Client : connecting to server: " << hostAddress;
     m_webSocket->open(hostAddress);
+
 }
 
 
 void WebSocketHandler::onConnected()
 {
     qDebug() << "Connection established!";
+    m_webSocket->sendTextMessage("Hello world");
 }
 
 void WebSocketHandler::onTextMessageRecived(QString message)

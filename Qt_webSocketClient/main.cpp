@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 
     WebSocketHandler socketHandler;
 
-    socketHandler.connectToServer("");
+    socketHandler.connectToServer("ws://127.0.0.1:8585");
 
     return a.exec();
 }
